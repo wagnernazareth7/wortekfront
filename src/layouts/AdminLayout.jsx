@@ -43,14 +43,12 @@ function AdminLayout() {
 
   return (
     <div
-      className={`admin-shell ${
-        collapsed ? 'sidebar-collapsed' : ''
-      }`}
+      className={`admin-shell ${collapsed ? 'sidebar-collapsed' : ''
+        }`}
     >
       <aside
-        className={`sidebar ${
-          mobileOpen ? 'sidebar-mobile-open' : ''
-        }`}
+        className={`sidebar ${mobileOpen ? 'sidebar-mobile-open' : ''
+          }`}
       >
         <div className="sidebar-brand">
           <div className="brand-mark">W</div>
@@ -94,8 +92,7 @@ function AdminLayout() {
                     title={collapsed ? item.label : undefined}
                     onClick={() => setMobileOpen(false)}
                     className={({ isActive }) =>
-                      `navigation-item ${
-                        isActive ? 'active' : ''
+                      `navigation-item ${isActive ? 'active' : ''
                       }`
                     }
                   >

@@ -57,6 +57,32 @@ export const api = {
       method: 'POST',
     })
   },
+
+  getClientes(search = '') {
+    const query = search.trim()
+      ? `?search=${encodeURIComponent(search.trim())}`
+      : ''
+
+    return request(`/clientes${query}`)
+  },
+
+  getCliente(id) {
+    return request(`/clientes/${id}`)
+  },
+
+  createCliente(data) {
+    return request('/clientes', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    })
+  },
+
+  updateCliente(id, data) {
+    return request(`/clientes/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(data),
+    })
+  },
 }
 
 export default api

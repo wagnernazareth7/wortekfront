@@ -7,6 +7,7 @@ import {
 
 import ProtectedRoute from './components/ProtectedRoute'
 import AdminLayout from './layouts/AdminLayout'
+import Clientes from './pages/Clientes'
 import Dashboard from './pages/Dashboard'
 import Login from './pages/Login'
 
@@ -21,6 +22,11 @@ function App() {
             <Route
               path="/dashboard"
               element={<Dashboard />}
+            />
+
+            <Route
+              path="/clientes"
+              element={<Clientes />}
             />
           </Route>
         </Route>
